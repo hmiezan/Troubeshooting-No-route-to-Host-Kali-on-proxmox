@@ -56,6 +56,26 @@ After applying the fix  > - ASA ARP table showed Vlan xyz 10.161.X.X  bc24.11af.
 • 	Always validate the full path: VM → Bridge → NIC → Switch → ASA.
 
 ### Skills demonstrated
-• 	Network Troubleshooting & Diagnostics
-• 	VLAN & Trunking Configuration
-• 	Packet Capture & Traffic Analysis
+🔹 	Network Troubleshooting & Diagnostics
+- Diagnosed gateway reachability issues by analyzing ARP behavior, routing tables, and interface states.
+- Distinguished between L2 failures (ARP incomplete) and L3 symptoms (ICMP unreachable).
+
+🔹	VLAN & Trunking Configuration
+- Validated and corrected VLAN tagging across:
+- Proxmox VM NICs
+- Linux bridges
+- Physical switch trunk ports
+- ASA subinterfaces
+- Identified a missing VLAN xyz trunk as the root cause of ARP failure
+
+🔹 Firewall & ASA Subinterface Management
+- Verified ASA subinterface configuration for multiple VLANs.
+- Confirmed ASA ARP responses and interface status to validate L2 connectivity.
+- Ensured ASA routing and NAT readiness after restoring VLAN reachability
+
+🔹 	Packet Capture & Traffic Analysis
+- Used tcpdump to observe ARP requests and replies in real time.
+- Interpreted packet-level evidence to confirm VLAN path restoration.
+- Demonstrated SOC-relevant traffic inspection and diagnostic skills
+
+
